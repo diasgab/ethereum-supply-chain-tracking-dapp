@@ -43,7 +43,7 @@ Install all required npm packages (as listed in ```package.json```):
 npm install
 ```
 
-Copy the .env.dist file to .env and fill in the infura key and mnemonic from Metamask wallet (you will only need the mnemonic to [deploy](#deployment) to production systems):
+Copy the .env.dist file to .env and fill in the infura key and mnemonic from Metamask wallet (you will only need these to [deploy](#deployment) to production systems):
 ```
 cp .env.dist .env
 ```
@@ -97,7 +97,7 @@ npm install -g ganache-cli
 ```
 2. Run ganache using the same mnemonic than before:
 ```
-ganache-cli -m "SEED FROM THE .env FILE"
+ganache-cli -m "SEED FROM RUNNING TRUFFLE DEVELOP"
 ```
 
 3. In the development section in truffle-config.js, change the port from 9545 to 8545.
@@ -111,18 +111,19 @@ truffle migrate --reset
 
 ## Deployment
 
-In order to deploy these contracts in the Rikeby network you will have to provide a valid Infura API key and save it to yout .env file.
+Follow these steps to deploy to Rinkeby network:
 
-You will also need some test eher in your metamask (you can use any test faucet to get it).
-
-You will need the mnemonic from your test metamask and save it to your .evn file.
-
-Then run:
+1. Provide a valid Infura API key and save it to yout .env file.
+2. Get some test eher in your metamask (you can use any test faucet to get it).
+3. Save the mnemonic from your metamask (your account with test ether) to your .evn file.
+4. Run:
 ```
 truffle migrate --reset --network rinkeby
 ```
 
 ## Already deployed contracts
+
+Here are the public contracts in Rinkeby for the current app:
 ```
 FarmerRole contract address: 0xCf89c4062CB09a1c448473b0f1a4013F207284ba
 DistributorRole contract address: 0xbc6f847162585154BB22be4d904584B5931372cC
