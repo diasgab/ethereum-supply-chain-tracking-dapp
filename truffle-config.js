@@ -10,7 +10,7 @@ module.exports = {
 
     development: {
       host: "127.0.0.1",     // Localhost (default: none)
-      port: 9545,            // Standard Ethereum port (default: none)
+      port: 9545,            // use 9545 for Truffle and 8545 for Ganache
       network_id: "*",       // Any network (default: none)
       gas: 4500000,        
       gasPrice: 10000000000,
